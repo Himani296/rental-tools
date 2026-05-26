@@ -1,0 +1,30 @@
+/* CreateInvoicemodal.css — local overrides only; shared modal styles in index.css */
+
+.invoice-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.invoice-modal {
+  max-width: 1000px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.invoice-header h2 {
+  margin: 0;
+}
+
+.invoice-body {
+  margin-top: 10px;
+}

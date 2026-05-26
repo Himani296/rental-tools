@@ -1,0 +1,110 @@
+.account-container {
+  padding: var(--page-padding);
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.account-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.company-name {
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: var(--btn-padding);
+  background: var(--color-danger);
+  border: none;
+  color: white;
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.logout-btn:hover { opacity: 0.87; }
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: var(--btn-padding);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.tabs button:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.tab-content {
+  background: var(--color-surface);
+  padding: 28px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.tab-content label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.tab-content input,
+.tab-content select {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  background: var(--color-bg);
+  outline: none;
+}
+
+.tab-content input:focus,
+.tab-content select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+.save-btn {
+  margin-top: 10px;
+  padding: var(--btn-padding);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.save-btn:hover { background: var(--color-primary-dark); }

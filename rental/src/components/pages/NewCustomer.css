@@ -1,0 +1,7 @@
+/* NewCustomer.css — local overrides only; shared modal styles in index.css */
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

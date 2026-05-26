@@ -1,0 +1,5 @@
+/* CustomerCSVimport.css — local overrides only; shared modal styles in index.css */
+
+.csv-modal {
+  max-width: 750px;
+}

@@ -1,0 +1,13 @@
+/* NewProductModal.CSS — local overrides only; shared modal styles in index.css */
+
+/* Inputs consistent height */
+.modal-container input,
+.modal-container select {
+  height: 42px;
+}
+
+.modal-container textarea {
+  height: 90px;
+  padding-top: 10px;
+  resize: none;
+}
