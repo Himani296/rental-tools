@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Accountsetting.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../config";
 
 const LANGUAGE_OPTIONS = ["English", "Hindi", "Gujarati"];
 const STATE_OPTIONS = [
@@ -124,7 +125,7 @@ function AccountSetting() {
     setSaving(true);
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/user/${userId}`,
+        `${API_URL}/user/${userId}`,
         payload,
       );
       setUser(response.data);
@@ -156,7 +157,7 @@ function AccountSetting() {
         }
 
         const response = await axios.get(
-          `http://localhost:5000/api/user/${userId}`,
+          `${API_URL}/user/${userId}`,
         );
 
         const fetchedUser = response.data;

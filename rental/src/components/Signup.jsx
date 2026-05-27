@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import signupImg from "../assets/signup.png";
 import axios from "axios";
+import API_URL from "../config";
 
 function Signup() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Signup() {
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/user/register",
+      `${API_URL}/user/register`,
       {
         username: formData.username ,   // company name as username
         email: formData.email,

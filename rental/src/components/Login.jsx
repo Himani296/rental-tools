@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import "./Login.css";
+import axios from "axios";import API_URL from "../config";import "./Login.css";
 import signupImg from "../assets/signup.png";
 
 
@@ -14,7 +13,7 @@ function Login() {
    const handleLogin = async () => {
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/user/login",
+      `${API_URL}/user/login`,
       {
         username,
         password

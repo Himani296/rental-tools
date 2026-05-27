@@ -1,7 +1,7 @@
-import axios from "axios";
+import api from "./api";
 console.log("PRODUCT SERVICE LOADED");
 
-const API_URL = "http://localhost:5000/api/products";
+const RESOURCE = "/products";
 
 export const getProductAvailableQty = (product) =>
   Number(product?.AvailableQty ?? product?.available ?? 0);
@@ -16,22 +16,20 @@ export const normalizeProductInventory = (product) => ({
 });
 
 export const addProduct = async (productData) => {
-  const response = await axios.post(API_URL, productData);
+  const response = await api.post(RESOURCE, productData);
   return response.data;
 };
 
 export const getProducts = async () => {
-  const response = await axios.get(API_URL);
+  const response = await api.get(RESOURCE);
   return response.data;
 };
 export const updateProduct = async (id, productData) => {
-  const response = await axios.put(`${API_URL}/${id}`, productData);
+  const response = await api.put(`${RESOURCE}/${id}`, productData);
   return response.data;
 };
 
-export const deleteProduct = (id) => {
-  return axios.delete(`${API_URL}/${id}`);
-};
+export const deleteProduct = (id) => api.delete(`${RESOURCE}/${id}`);
 
 const toNumber = (value, fallback = 0) => {
   const parsed = Number(value);

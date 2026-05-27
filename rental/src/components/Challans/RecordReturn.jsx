@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API_URL from "../../config";
 import "./NewChallan.css";
 
 function RecordReturn({ challan, onClose, onSuccess }) {
@@ -51,7 +52,7 @@ function RecordReturn({ challan, onClose, onSuccess }) {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/returns", {
+      await axios.post(`${API_URL}/returns`, {
         challanId: challan._id,
         returnDate,
         items,

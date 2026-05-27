@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../../config";
 import NewChallan from "./NewChallan";
 import RecordReturn from "./RecordReturn";
 import "./Challans.css";
@@ -30,7 +31,7 @@ function Challans() {
 
   const loadCustomers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/customers");
+      const res = await axios.get(`${API_URL}/customers`);
       setCustomers(res.data || []);
     } catch (error) {
       console.log(error);

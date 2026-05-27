@@ -1,25 +1,19 @@
 // customerService.js
-import axios from "axios";
+import api from "./api";
 
-const API_URL = "http://localhost:5000/api/customers";
+const RESOURCE = "/customers";
 
 // ✅ Bulk Add
-export const addCustomersBulk = (dataArray) => {
-  return axios.post(`${API_URL}/bulk`, dataArray);
-};
+export const addCustomersBulk = (dataArray) => api.post(`${RESOURCE}/bulk`, dataArray);
 
 // ✅ Single Add
-export const addCustomer = (data) => {
-  return axios.post(API_URL, data);
-};
+export const addCustomer = (data) => api.post(RESOURCE, data);
 
 // ✅ Get All
 export const getCustomers = async () => {
-  const response = await axios.get("http://localhost:5000/api/customers");
+  const response = await api.get(RESOURCE);
   return response.data;
 };
 
 // ✅ Delete
-export const deleteCustomer = (id) => {
-  return axios.delete(`${API_URL}/${id}`);
-};
+export const deleteCustomer = (id) => api.delete(`${RESOURCE}/${id}`);
