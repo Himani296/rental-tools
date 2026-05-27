@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Papa from "papaparse";
 import { addCustomersBulk } from "../../Services/Customerservice";
-import "./CustomerCSVImport.css";
+import "./CustomerCSVImport.css"
 
 export default function CustomerCSVImport({ closeModal, onCustomerAdded }) {
   const [preview, setPreview] = useState([]);
