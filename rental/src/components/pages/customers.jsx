@@ -1,7 +1,6 @@
 import "./customers.css";
 import { useState, useEffect } from "react";
 import NewCustomer from "./NewCustomer";
-import "./CustomerCSVImport.css";
 import { getCustomers, deleteCustomer } from "../../Services/Customerservice";
 import { getOrders } from "../../Services/orderService";
 import { useNavigate } from "react-router-dom";
