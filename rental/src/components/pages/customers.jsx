@@ -1,4 +1,4 @@
-import "./Customers.css";
+import "./customers.css";
 import { useState, useEffect } from "react";
 import NewCustomer from "./NewCustomer";
 import CustomerCSVImport from "./CustomerCSVImport";
